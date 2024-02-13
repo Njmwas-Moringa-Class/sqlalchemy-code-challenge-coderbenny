@@ -3,11 +3,12 @@ import random
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
 import ipdb;
+from lib.models import Review, Restaurant, Customer
 
 
 if __name__ == '__main__':
     
-    engine = create_engine('sqlite:///restaurants.db')
+    engine = create_engine('sqlite:///lib/db/restaurants.db')
     Session = sessionmaker(bind=engine)
     session = Session()
 
